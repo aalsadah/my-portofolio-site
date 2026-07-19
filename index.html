@@ -6,14 +6,8 @@
         <title>Ali AlSadah Portfolio</title>
         <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
         <style>
-            h1{
-             border: solid;
-            }
-            h2{
-                border: 1px solid;
-            }
-            h3{
-                border: 1px solid;
+            h1,h2,h3,h4{
+             border: 1px solid;
             }
         </style>
         <script></script>
@@ -29,6 +23,7 @@
                 <li><a href = "/experience.html">Experience</a></li>
                 <li><a href = "/contact.html">Contact</a></li>
                 <li><a href = "documents/resume2.pdf" target="_blank">Resume</a></li>
+                <li><a href="./expiremental.html"><i>Expiremental</i></a></li>
             </ul>   
         </nav>    
     </header>
@@ -44,12 +39,22 @@
             </picture>
         </section>
 
+        <section>
         <h3>Interests:</h3>
             <ol>
                 <li>Cooking</li>
                 <li>Video Games</li>
                 <li>Running</li>
-            </ol>  
+            </ol>
+        </section>
+
+        <section>
+            <h4>A song I enjoy</h4>
+        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150"
+            style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/album/sabah-yaoum-jedid/892226796?i=892226797"></iframe>
+        </section>
     </main>
 
     <footer>
@@ -65,7 +70,12 @@
         </form>
         <br>
         <p>Page made with love &hearts;</p>
-        <button type="button">&hearts; Like this Page &hearts;</button>
+        
+        <button command="show-modal" commandfor="my-dialog">&hearts; Like this Page &hearts;</button>
+        <dialog id="my-dialog">
+            <p>Thank you for liking the page!</p>
+            <button commandfor="my-dialog" command="close">Close</button>
+        </dialog>
      </footer>
 
     </body>
