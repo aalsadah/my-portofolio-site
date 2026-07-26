@@ -10,10 +10,27 @@
              border: 1px solid;
             }
         </style>
-        <script></script>
+        <script>
+            class Greenify extends HTMLElement{
+                constructor(){
+                    super();
+                    alert("hi");
+                } 
+            }
+            customElements.define("make-green", Greenify);
+            class HelloWorld extends HTMLElement{
+                constructor(){
+                    super();
+                    console.log("hello world");
+                }
+            }
+            customElements.define('hello-world', HelloWorld);
+        </script>
     </head>
     <body>
     <header>
+        <make-green></make-green>
+        <hello-world></hello-world>
         <h1>Site Navigation</h1>
         <nav>
             <ul>
@@ -48,17 +65,17 @@
         </section>
 
         <section>
-            <h4>A song I enjoy</h4>
-        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150"
-            style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/sabah-yaoum-jedid/892226796?i=892226797"></iframe>
+            <h4>♫ An album I love ♫</h4>
+    <iframe allow="autoplay *; encrypted-media *;" height="450"
+        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+        sandbox="allow-forms allow-popups allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        src="https://embed.music.apple.com/us/album/twilight/1596227761"></iframe>
         </section>
     </main>
 
     <footer>
        <hr>
-       <form name = "feedback">
+       <form id="feedback" name = "feedback">
             <fieldset>
                 <legend>I would appreciate any feedback you have for my Portfolio site!</legend>
                 <label></label>
